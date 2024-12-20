@@ -34,11 +34,11 @@ from http.client import HTTPResponse as httpr
 from requests import get
 
 bot_token = '7672118906:AAENX15UVxxbOhpYU-KfnLi-aUBN1Zy6H04'
-ALLOWED_GROUP_CHAT_ID = -4606551108
+ALLOWED_GROUP_CHAT_ID = -1002303206802
 
 bot = telebot.TeleBot(bot_token)
 
-allowed_group_id = -4606551108
+allowed_group_id = -1002303206802
 #-1002477513899
 allowed_users = []
 processes = []
