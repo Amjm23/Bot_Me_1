@@ -105,21 +105,21 @@ load_users_from_database()
 @bot.message_handler(commands=['start', 'help'])
 def help(message):
     help_text = '''
-    Welcome to DDoS Amjm
+    🩸 ✱Welcome to DDoS Amjm
 📌 All Commands:
-DDoS Command (Website Attack)
+✱DDoS Command (Website Attack)
 - /attack + [methods] + [host]
 - /methods: To View Methods
 - /check + [host]: Check AntiDDoS
 - /proxy: Check Number of Proxies
-Useful Commands ^^
+✱Useful Commands ^^
 - /code + [host]: Get Website Source Code
 - /getproxy: Proxy Will Automatically Update After 10 Minutes
 - /list: View list of prx that can be obtained
 - /prx + Type of Proxy You Want to Get
 [ Live Proxy 95% Die 5% ]
 - /time: Number of Time Bot Active
-Info Admin
+✱Info Admin
 - /muakey: To Buy VIP Key
 - /admin: Info Admin
 - /on: On Bot
@@ -206,16 +206,16 @@ def methods(message):
 📌 All Methods:
 🚀 Layer7
 [ No Gov, Edu ]
-TLS
-BROWSER
-CF-BYPASS
-HTTP
-HTTPS
+✱TLS
+✱BROWSER
+✱CF-BYPASS
+✱HTTP
+✱HTTPS
 [ Pem Gov, Edu ]
-GOD
+✱GOD
 🚀 Layer4
-TCP-FLOOD
-UDP-FLOOD
+✱TCP-FLOOD
+✱UDP-FLOOD
 '''
     bot.reply_to(message, help_text)
 
